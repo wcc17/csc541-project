@@ -59,7 +59,8 @@ namespace WindowsFormsApplication1
                      
             ArrayList eventList = new ArrayList();  //an event list that will keep all the conflicted events
             DataTable myTable = new DataTable();  //for retriving conflicted events from datanase
-            string connStr = "server=csshrpt.eku.edu;user=csc440;database=csc440;port=3306;password=CSC440student;";
+            //string connStr = "server=csshrpt.eku.edu;user=csc440;database=csc440;port=3306;password=CSC440student;";
+            string connStr = "server=107.170.77.79;user=csc541user;database=csc440;port=3306;password=chang;";
             MySqlConnection conn = new MySqlConnection(connStr);
             try
             {
@@ -135,9 +136,10 @@ namespace WindowsFormsApplication1
             }
 
             //If no conflicted event exists, do the follows
-            
+
             //prepare an SQL query to save the event
-            string connStr = "server=csshrpt.eku.edu;user=csc440;database=csc440;port=3306;password=CSC440student;";
+            //string connStr = "server=csshrpt.eku.edu;user=csc440;database=csc440;port=3306;password=CSC440student;";
+            string connStr = "server=107.170.77.79;user=csc541user;database=csc440;port=3306;password=chang;";
             MySqlConnection conn = new MySqlConnection(connStr);
             try
             {
@@ -165,7 +167,8 @@ namespace WindowsFormsApplication1
         public void deleteEvent()
         {
             //prepare an SQL query to delete the event from the database
-            string connStr = "server=csshrpt.eku.edu;user=csc440;database=csc440;port=3306;password=CSC440student;";
+            //string connStr = "server=csshrpt.eku.edu;user=csc440;database=csc440;port=3306;password=CSC440student;";
+            string connStr = "server=107.170.77.79;user=csc541user;database=csc440;port=3306;password=chang;";
             MySqlConnection conn = new MySqlConnection(connStr);
             try
             {
@@ -229,7 +232,8 @@ namespace WindowsFormsApplication1
             ArrayList eventList = new ArrayList();  //a list to save the events
             //prepare an SQL query to retrieve all the events on the same, specified date
             DataTable myTable = new DataTable();
-            string connStr = "server=csshrpt.eku.edu;user=csc440;database=csc440;port=3306;password=CSC440student;";
+            //string connStr = "server=csshrpt.eku.edu;user=csc440;database=csc440;port=3306;password=CSC440student;";
+            string connStr = "server=107.170.77.79;user=csc541user;database=csc440;port=3306;password=chang;";
             MySqlConnection conn = new MySqlConnection(connStr);
             try
             {
@@ -268,7 +272,8 @@ namespace WindowsFormsApplication1
             ArrayList eventList = new ArrayList();  //a list to save the events
             //prepare an SQL query to retrieve all the events in the same, specified month
             DataTable myTable = new DataTable();
-            string connStr = "server=csshrpt.eku.edu;user=csc440;database=csc440;port=3306;password=CSC440student;";
+            //string connStr = "server=csshrpt.eku.edu;user=csc440;database=csc440;port=3306;password=CSC440student;";
+            string connStr = "server=107.170.77.79;user=csc541user;database=csc440;port=3306;password=chang;";
             MySqlConnection conn = new MySqlConnection(connStr);
             try
             {
