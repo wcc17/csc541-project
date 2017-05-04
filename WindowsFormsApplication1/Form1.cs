@@ -26,7 +26,13 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
+        {
+            //had to move code here to LoadEvents method for easier testing
+            LoadEvents();
+        }
+
+        public void LoadEvents()
         {
             //initialize the default values of variables used in the system when the form is called and loaded
             DateTime thisDay = DateTime.Today;  //get today's date
@@ -47,14 +53,17 @@ namespace WindowsFormsApplication1
                 listBox1.Items.Add(eventIndex);
             }
             //display the frst event of the list in the form
-            Event thisEvent = eventList[0] as Event;
-            textBox1.Text = thisEvent.getTitle();
-            textBox2.Text = thisEvent.getDate();
-            comboBox1.SelectedIndex = thisEvent.getStartTime();
-            comboBox1.Text = comboBox1.SelectedItem.ToString();
-            comboBox2.SelectedIndex = thisEvent.getEndTime();
-            comboBox2.Text = comboBox2.SelectedItem.ToString();
-            richTextBox1.Text = thisEvent.getContent();
+            if(eventList.Count > 0)
+            {
+                Event thisEvent = eventList[0] as Event;
+                textBox1.Text = thisEvent.getTitle();
+                textBox2.Text = thisEvent.getDate();
+                comboBox1.SelectedIndex = thisEvent.getStartTime();
+                comboBox1.Text = comboBox1.SelectedItem.ToString();
+                comboBox2.SelectedIndex = thisEvent.getEndTime();
+                comboBox2.Text = comboBox2.SelectedItem.ToString();
+                richTextBox1.Text = thisEvent.getContent();
+            }
         }
 
 

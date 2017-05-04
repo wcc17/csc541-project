@@ -47,11 +47,13 @@ E:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsA
 E:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
 E:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 E:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
-Y:\Development\csc541-project\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
-Y:\Development\csc541-project\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
-Y:\Development\csc541-project\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-Y:\Development\csc541-project\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
 Y:\Development\csc541-project\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
 Y:\Development\csc541-project\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
 Y:\Development\csc541-project\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 Y:\Development\csc541-project\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+Y:\Development\csc541-project\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+Y:\Development\csc541-project\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+Y:\Development\csc541-project\WindowsFormsApplication1\bin\Debug\nunit.framework.dll
+Y:\Development\csc541-project\WindowsFormsApplication1\bin\Debug\nunit.framework.xml
+Y:\Development\csc541-project\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+Y:\Development\csc541-project\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
