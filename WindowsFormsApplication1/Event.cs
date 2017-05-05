@@ -135,6 +135,13 @@ namespace WindowsFormsApplication1
                 return false;  //return false to indicate the failure of svaing the event
             }
 
+            //2. Can Save An Event with the Same Start and End Times
+            if (eventStartTime == eventEndTime)
+            {
+                MessageBox.Show("The start time cannot be the same time as the end time");
+                return false;
+            }
+
             //If no conflicted event exists, do the follows
 
             //prepare an SQL query to save the event

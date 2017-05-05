@@ -373,7 +373,7 @@ namespace WindowsFormsApplication1
 
 
         //to make sure that the user wish to delete the selected event displayed in the form with relevant controls, and set the form to its original setting
-        private void button8_Click(object sender, EventArgs e)
+        public void button8_Click(object sender, EventArgs e)
         {
             button1.Visible = true;
             button2.Visible = true;
@@ -383,7 +383,8 @@ namespace WindowsFormsApplication1
             button7.Visible = false;
             button8.Visible = false;
 
-            if (eventList.Count > 0 && textBox1.Text != "") //if a valid event was selected for deletion
+            //4. Can't delete an event with a blank name. Removed the check to see if textBox1.Text had text in it.
+            if (eventList.Count > 0)// && textBox1.Text != "") //if a valid event was selected for deletion
             {
                 //delete the selected event from the datbase
                 Event aDeletedEvent = new Event(textBox1.Text, textBox2.Text, comboBox1.SelectedIndex, comboBox2.SelectedIndex, richTextBox1.Text);
