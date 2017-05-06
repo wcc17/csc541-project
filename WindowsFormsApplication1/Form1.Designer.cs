@@ -59,7 +59,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(6);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -95,7 +95,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(36, 873);
-            this.button5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button5.Margin = new System.Windows.Forms.Padding(6);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(454, 71);
             this.button5.TabIndex = 4;
@@ -106,7 +106,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(36, 813);
-            this.button4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button4.Margin = new System.Windows.Forms.Padding(6);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(454, 71);
             this.button4.TabIndex = 3;
@@ -117,7 +117,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(36, 752);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(454, 71);
             this.button3.TabIndex = 2;
@@ -128,7 +128,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(36, 694);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(454, 71);
             this.button2.TabIndex = 1;
@@ -139,7 +139,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(36, 633);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(454, 71);
             this.button1.TabIndex = 0;
@@ -152,7 +152,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 25;
             this.listBox1.Location = new System.Drawing.Point(36, 369);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(6);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(450, 229);
             this.listBox1.TabIndex = 0;
@@ -222,7 +222,7 @@
             "11:00 pm",
             "11:30 pm"});
             this.comboBox2.Location = new System.Drawing.Point(164, 183);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(238, 33);
             this.comboBox2.TabIndex = 14;
@@ -282,7 +282,7 @@
             "11:00 pm",
             "11:30 pm"});
             this.comboBox1.Location = new System.Drawing.Point(164, 131);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(238, 33);
             this.comboBox1.TabIndex = 13;
@@ -291,7 +291,7 @@
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(262, 900);
-            this.button9.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button9.Margin = new System.Windows.Forms.Padding(6);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(214, 44);
             this.button9.TabIndex = 12;
@@ -303,7 +303,7 @@
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(240, 900);
-            this.button8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button8.Margin = new System.Windows.Forms.Padding(6);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(404, 44);
             this.button8.TabIndex = 11;
@@ -315,7 +315,7 @@
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(730, 900);
-            this.button7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button7.Margin = new System.Windows.Forms.Padding(6);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(150, 44);
             this.button7.TabIndex = 10;
@@ -327,7 +327,7 @@
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(222, 900);
-            this.button6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button6.Margin = new System.Windows.Forms.Padding(6);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(150, 44);
             this.button6.TabIndex = 9;
@@ -339,7 +339,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(54, 231);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(1014, 650);
@@ -369,7 +369,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(164, 81);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(6);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(904, 31);
@@ -388,7 +388,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(164, 29);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(904, 31);
@@ -410,7 +410,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1676, 1008);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Events Management";
@@ -431,7 +431,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -447,6 +446,7 @@
         public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.ComboBox comboBox2;
         public System.Windows.Forms.RichTextBox richTextBox1;
+        public System.Windows.Forms.ListBox listBox1;
     }
 }
 

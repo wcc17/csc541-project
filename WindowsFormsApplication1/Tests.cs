@@ -36,9 +36,8 @@ namespace WindowsFormsApplication1
             }
         }
 
-        //Form1.load() was trying to open the first event even though
-        //no events were loaded from the database. This test failed on that
-        //once fixed, the test works
+
+        //Adding an event to the calendar
         [Test]
         public void LoadTest_DisplayFirstEvent_NoEvents()
         {
@@ -47,6 +46,10 @@ namespace WindowsFormsApplication1
 
             //had to move code that was in Form1.Load() to Form1.LoadEvents() so that it was easier to test
             form1.LoadEvents();
+
+            DateTime thisDay = DateTime.Today;  //get today's date
+            string myString = thisDay.ToShortDateString();
+            Assert.AreEqual(new Event().getEventList(myString).Count, 0);
         }
 
         [Test]
@@ -82,10 +85,32 @@ namespace WindowsFormsApplication1
             bool saveEventResult = newEvent.saveNewEvent();
 
             Assert.True(saveEventResult);
-
-            deleteTodaysEvents();
         }
 
+        [Test]
+        public void saveNewEvent_blankTitle()
+        {
+            deleteTodaysEvents();
+
+            Event newEvent = new Event("", DateTime.Today.ToShortDateString(), 1, 2, "event");
+            bool saveEventResult = newEvent.saveNewEvent();
+
+            Assert.False(saveEventResult);
+        }
+
+        [Test]
+        public void saveNewEvent_whiteSpaceTitle()
+        {
+            deleteTodaysEvents();
+
+            Event newEvent = new Event("     ", DateTime.Today.ToShortDateString(), 1, 2, "event");
+            bool saveEventResult = newEvent.saveNewEvent();
+
+            Assert.False(saveEventResult);
+        }
+
+
+        //Deleting an Event From the Calendar
         [Test]
         public void deleteEvent_blankTitle()
         {
@@ -100,16 +125,33 @@ namespace WindowsFormsApplication1
             Event newEvent = new Event("", DateTime.Today.ToShortDateString(), 1, 2, "event stuff");
             newEvent.saveNewEvent();
 
-            form1.LoadEvents();
+            ArrayList events = newEvent.getEventList(DateTime.Today.ToShortDateString());
+            foreach (Event e in events)
+            {
+                form1.eventList.Add(e);
+            }
+            
             form1.textBox1.Text = newEvent.getTitle();
             form1.textBox2.Text = DateTime.Today.ToShortDateString();
             form1.comboBox1.SelectedItem = 1;
             form1.comboBox2.SelectedItem = 2;
             form1.richTextBox1.Text = "event stuff";
             form1.button8_Click(null, new EventArgs());
+            
+            Assert.AreEqual(0, form1.eventList.Count);
+        }
 
-            ArrayList list = newEvent.getEventList(DateTime.Today.ToShortDateString());
-            Assert.AreEqual(0, list.Count);
+
+        //Viewing an Event in the Calendar
+        [Test]
+        public void saveNewEvent_invalidTime()
+        {
+            deleteTodaysEvents();
+
+            Event newEvent = new Event("", DateTime.Today.ToShortDateString(), 0, -1, "event");
+            bool saveEventResult = newEvent.saveNewEvent();
+
+            Assert.False(saveEventResult);
         }
     }
 }

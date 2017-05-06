@@ -135,10 +135,26 @@ namespace WindowsFormsApplication1
                 return false;  //return false to indicate the failure of svaing the event
             }
 
+            //6. Saving an event with 00:00am - 00:00pm breaks view calendar
+            if(eventEndTime < 0
+                || eventStartTime < 0
+                || eventEndTime < eventStartTime)
+            {
+                MessageBox.Show("Invalid time entered");
+                return false;
+            }
+
             //2. Can Save An Event with the Same Start and End Times
             if (eventStartTime == eventEndTime)
             {
                 MessageBox.Show("The start time cannot be the same time as the end time");
+                return false;
+            }
+
+            //4. Can Save An Event With a Blank Name
+            if(String.IsNullOrEmpty(eventTitle) || String.IsNullOrWhiteSpace(eventTitle))
+            {
+                MessageBox.Show("Must use a valid event title");
                 return false;
             }
 

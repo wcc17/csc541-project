@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        ArrayList eventList = new ArrayList();  //a local list to ssave events of a specified date or month to be referred by all the controls in the form
+        public ArrayList eventList = new ArrayList();  //a local list to ssave events of a specified date or month to be referred by all the controls in the form
         string selectedDate = "";  //the date selected by the user
         int selectedEventIndex = -1;  //the indexing number of the selected event in the event list
         bool monthlyEventMode = false;  //whether the display is to show all the events in the same month or just in a particular day
@@ -316,6 +316,13 @@ namespace WindowsFormsApplication1
             button5.Visible = false;
             button7.Visible = true;
             button8.Visible = true;
+
+            //6. Can Delete Event Other than the Event Chosen To Delete on The Confirmation Screen
+            //7. Removing Title From Event on Delete Confirmation Screen Causes an Error
+            textBox1.ReadOnly = true;
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
+            richTextBox1.ReadOnly = true;
         }
 
 
@@ -454,6 +461,13 @@ namespace WindowsFormsApplication1
                     richTextBox1.Text = thisEvent.getContent();
                 }
             }
+
+            //6. Can Delete Event Other than the Event Chosen To Delete on The Confirmation Screen
+            //7. Removing Title From Event on Delete Confirmation Screen Causes an Error
+            textBox1.ReadOnly = false;
+            comboBox1.Enabled = true;
+            comboBox2.Enabled = true;
+            richTextBox1.ReadOnly = false;
         }
 
 
