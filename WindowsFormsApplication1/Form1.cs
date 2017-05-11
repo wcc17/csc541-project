@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1
                 string eventIndex = findSelectedTime(nextEvent.getStartTime()) + "    " + findSelectedTime(nextEvent.getEndTime()) + "    " + nextEvent.getTitle();
                 listBox1.Items.Add(eventIndex);
             }
-            //display the frst event of the list in the form
+            //1. Unable to open program
             if(eventList.Count > 0)
             {
                 Event thisEvent = eventList[0] as Event;
@@ -390,7 +390,7 @@ namespace WindowsFormsApplication1
             button7.Visible = false;
             button8.Visible = false;
 
-            //4. Can't delete an event with a blank name. Removed the check to see if textBox1.Text had text in it.
+            //6. Can't delete an event with a blank name. Removed the check to see if textBox1.Text had text in it.
             if (eventList.Count > 0)// && textBox1.Text != "") //if a valid event was selected for deletion
             {
                 //delete the selected event from the datbase
@@ -462,8 +462,8 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            //6. Can Delete Event Other than the Event Chosen To Delete on The Confirmation Screen
-            //7. Removing Title From Event on Delete Confirmation Screen Causes an Error
+            //7. Can Delete Event Other than the Event Chosen To Delete on The Confirmation Screen
+            //8. Removing Title From Event on Delete Confirmation Screen Causes an Error
             textBox1.ReadOnly = false;
             comboBox1.Enabled = true;
             comboBox2.Enabled = true;

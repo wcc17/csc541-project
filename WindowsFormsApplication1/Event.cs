@@ -151,10 +151,24 @@ namespace WindowsFormsApplication1
                 return false;
             }
 
-            //4. Can Save An Event With a Blank Name
+            //3. Can Save An Event With a Blank Name
             if(String.IsNullOrEmpty(eventTitle) || String.IsNullOrWhiteSpace(eventTitle))
             {
                 MessageBox.Show("Must use a valid event title");
+                return false;
+            }
+
+            //4. Saving an event with a title more than 50 char throws an error
+            if(eventTitle.Length >= 50)
+            {
+                MessageBox.Show("Title is too long!");
+                return false;
+            }
+            
+            //5. Saving an event with a description more than 200 char throws an error
+            if(eventContent.Length >= 200)
+            {
+                MessageBox.Show("Content is too long!");
                 return false;
             }
 
@@ -289,11 +303,16 @@ namespace WindowsFormsApplication1
         }
 
 
+        //10. Only weekly event list is shown when button is clicked
         ////to retrieve a sorted list of events in the same month based on their start time
         public ArrayList getMonthlyEventList(string dateString)
         {
-            ArrayList eventList = new ArrayList();  //a list to save the events
-            //prepare an SQL query to retrieve all the events in the same, specified month
+            //"17-05-1"
+            String monthString = dateString.Substring(3, 2);
+            int month = Int32.Parse(monthString);
+            ArrayList eventList = new ArrayList();
+
+            //prepare an SQL query to retrieve all the events on the same, specified date
             DataTable myTable = new DataTable();
             //string connStr = "server=csshrpt.eku.edu;user=csc440;database=csc440;port=3306;password=CSC440student;";
             string connStr = "server=107.170.77.79;user=csc541user;database=csc440;port=3306;password=chang;";
@@ -302,9 +321,9 @@ namespace WindowsFormsApplication1
             {
                 Console.WriteLine("Connecting to MySQL...");
                 conn.Open();
-                string sql = "SELECT * FROM changEventTable WHERE date LIKE @myDate ORDER BY date ASC, startTime ASC";
+                string sql = "SELECT * FROM changEventTable WHERE MONTH(date) = @myDate ORDER BY startTime ASC";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@myDate", "%"+dateString+"%");
+                cmd.Parameters.AddWithValue("@myDate", month);
                 MySqlDataAdapter myAdapter = new MySqlDataAdapter(cmd);
                 myAdapter.Fill(myTable);
                 Console.WriteLine("Table is ready.");
