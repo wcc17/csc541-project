@@ -153,5 +153,57 @@ namespace WindowsFormsApplication1
 
             Assert.False(saveEventResult);
         }
+
+        [Test]
+        public void saveNewEvent_titleTooLarge()
+        {
+            deleteTodaysEvents();
+
+            Event newEvent = new Event("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcccccc",
+                DateTime.Today.ToShortDateString(), 0, 1, "event");
+            bool saveEventResult = newEvent.saveNewEvent();
+
+            Assert.False(saveEventResult);
+        }
+
+        [Test]
+        public void saveNewEvent_titleFiftyChar()
+        {
+            deleteTodaysEvents();
+
+            Event newEvent = new Event("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                DateTime.Today.ToShortDateString(), 0, 1, "event");
+            bool saveEventResult = newEvent.saveNewEvent();
+
+            Assert.False(saveEventResult);
+        }
+
+        [Test]
+        public void saveNewEvent_descTooLarge()
+        {
+            deleteTodaysEvents();
+
+            Event newEvent = new Event("title",
+                DateTime.Today.ToShortDateString(), 0, 1,
+                "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcccccccc");
+            bool saveEventResult = newEvent.saveNewEvent();
+
+            Assert.False(saveEventResult);
+        }
+
+        [Test]
+        public void saveNewEvent_desc200Char()
+        {
+            deleteTodaysEvents();
+
+            Event newEvent = new Event("title",
+                DateTime.Today.ToShortDateString(), 0, 1,
+                "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcccccccc");
+            bool saveEventResult = newEvent.saveNewEvent();
+
+            Assert.False(saveEventResult);
+        }
+
+
     }
 }
